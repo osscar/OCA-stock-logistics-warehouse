@@ -47,7 +47,7 @@ class SaleOrder(models.Model):
         lines = self.env["sale.order.line"].browse(line_ids)
         lines.release_stock_reservation()
         return True
-
+    
     def action_confirm(self):
         self.release_all_stock_reservation()
         return super().action_confirm()
@@ -90,7 +90,8 @@ class SaleOrder(models.Model):
                 )
             body += _("<div>     <b>Product qty.</b>: ")
             body += "{} → {}</div>".format(
-                old_vals["product_uom_qty"], float(new_vals["product_uom_qty"]),
+                old_vals["product_uom_qty"],
+                float(new_vals["product_uom_qty"]),
             )
         body += "<br/>"
         return body
@@ -112,17 +113,23 @@ class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
 
     def _get_line_rule(self):
-        """ Get applicable rule for this product
+        """Get applicable rule for this product
 
         Reproduce get suitable rule from procurement
-        to predict source location """
-        StockRule = self.env["stock.rule"]
+        to predict source location"""
+        ProcurementRule = self.env["procurement.rule"]
         product = self.product_id
         product_route_ids = [
-            x.id for x in product.route_ids + product.categ_id.total_route_ids
+            x.id
+            for x in product.route_ids
+            + product.categ_id.total_route_ids
+            + self.route_id
         ]
-        rules = StockRule.search(
-            [("route_id", "in", product_route_ids)],
+        rules = ProcurementRule.search(
+            [
+                ("route_id", "in", product_route_ids),
+                ("active", "=", True),
+            ],
             order="route_sequence, sequence",
             limit=1,
         )
@@ -138,14 +145,14 @@ class SaleOrderLine(models.Model):
                 ("route_id", "in", wh_route_ids),
             ]
 
-            rules = StockRule.search(domain, order="route_sequence, sequence")
+            rules = ProcurementRule.search(domain, order="route_sequence, sequence")
 
         if rules:
             fields.first(rules)
         return False
 
     def _get_procure_method(self):
-        """ Get procure_method depending on product routes """
+        """Get procure_method depending on product routes"""
         rule = self._get_line_rule()
         if rule:
             return rule.procure_method
@@ -186,6 +193,7 @@ class SaleOrderLine(models.Model):
         reserv_ids = [reserv.id for line in self for reserv in line.reservation_ids]
         reservations = self.env["stock.reservation"].browse(reserv_ids)
         reservations.release_reserve()
+        reservations.unlink()
         return True
 
     def write(self, vals):

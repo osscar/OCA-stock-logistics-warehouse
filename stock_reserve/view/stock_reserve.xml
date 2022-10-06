@@ -50,7 +50,7 @@
                                     class="oe_inline"
                                 />
                             </div>
-                            <field name="product_uom_category_id" invisible="1" />
+                            <!-- <field name="product_uom_category_id" invisible="1" /> -->
                             <field name="name" />
                             <field name="date_validity" />
                             <field name="create_date" groups="base.group_no_one" />

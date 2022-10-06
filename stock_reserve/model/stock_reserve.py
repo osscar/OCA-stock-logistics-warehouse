@@ -108,7 +108,13 @@ class StockReservation(models.Model):
     @api.model
     def _default_picking_type_id(self):
         ref = "stock.picking_type_out"
-        return self.env.ref(ref, raise_if_not_found=False).id
+        try:
+            picking = self.env.ref(ref, raise_if_not_found=True)
+            picking.check_access_rule("read")
+            picking_id = picking.id
+        except (except_orm, ValueError):
+            picking_id = False
+        return picking_id
 
     @api.model
     def _default_location_dest_id(self):
