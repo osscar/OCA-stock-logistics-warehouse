@@ -1,0 +1,281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_reserve_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-06 15:41+0000\n"
+"PO-Revision-Date: 2022-10-06 15:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:91
+#, python-format
+msgid "<div>     <b>Product qty.</b>: "
+msgstr "<div>     <b>Cant. producto/b>: "
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:84
+#, python-format
+msgid "<div>     <b>Product</b>: "
+msgstr "<div>     <b>Producto</b>: "
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:88
+#, python-format
+msgid "<div>     <b>Product</b>: %s"
+msgstr "<div>     <b>Producto</b>: %s"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:80
+#, python-format
+msgid "<p>Modified Order line data</p>"
+msgstr "<p>Informacion modificada de la linea del pedido</p>"
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_sale_stock_reserve_form
+msgid "A stock reservation will be created for the products\n"
+"                    of the selected quotation lines. If a validity date is specified,\n"
+"                    the reservation will be released once the date has passed."
+msgstr "Una reserva de existencias sera creada para los productos\n"
+"                    de las lineas de cotizacion seleccionadas. Si una fecha de validacion es especificada,\n"
+"                    la reserva sera liberada una vez vencida."
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_order_is_stock_reservable
+msgid "Can Have Stock Reservations"
+msgstr "Puede tener reservas de existencias"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_order_line_is_stock_reservable
+msgid "Can be reserved"
+msgstr "Puede ser reservado"
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_sale_stock_reserve_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_order_form_reserve
+msgid "Cancell all"
+msgstr "Cancelar todos"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:210
+#: code:addons/stock_reserve_sale/model/sale.py:225
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_order_has_stock_reservation
+msgid "Has Stock Reservations"
+msgstr "Tiene reservas de existencias"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,help:stock_reserve_sale.field_sale_stock_reserve_date_validity
+msgid "If a date is given, the reservations will be released at the end of the validity."
+msgstr "Si una fecha es seleccionada, las reservas sera liberadas en la fecha de vencimiento."
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_order_line_is_readonly
+msgid "Is Readonly"
+msgstr "Es solo lectura"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,help:stock_reserve_sale.field_sale_stock_reserve_location_dest_id
+msgid "Location where the system will reserve the products."
+msgstr "Ubicacion de reserva."
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_note
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_sale_stock_reserve_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_picking_type_id
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,help:stock_reserve_sale.field_sale_stock_reserve_picking_type_id
+msgid "Picking type for the operation."
+msgstr "Tipo de albaran para la operacion."
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_order_form_reserve
+msgid "Pre-book products from stock"
+msgstr "Pre-reserva de existencias"
+
+#. module: stock_reserve_sale
+#: model:ir.model,name:stock_reserve_sale.model_sale_order
+msgid "Quotation"
+msgstr "Cotización"
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_order_form_reserve
+msgid "Release Reservation"
+msgstr "Release Reservation"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_location_dest_id
+msgid "Reservation Location"
+msgstr "Ubicacion de reserva"
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_sale_stock_reserve_form
+msgid "Reserve"
+msgstr "Reservar"
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_order_form_reserve
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_sale_stock_reserve_form
+msgid "Reserve Stock"
+msgstr "Reservar Existencias"
+
+#. module: stock_reserve_sale
+#: model:ir.actions.act_window,name:stock_reserve_sale.action_sale_stock_reserve
+msgid "Reserve Stock for Quotation Lines"
+msgstr "Reservar stock para las lineas del pedido"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_stock_reservation_sale_id
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:103
+#, python-format
+msgid "Sale Order %s has some reserved lines.\n"
+"Please unreserve this lines before delete the order."
+msgstr "El pedido %s tiene algunas lineas con reservas.\n"
+"Libere las reservas antes de elminar el pedido."
+
+#. module: stock_reserve_sale
+#: model:ir.model,name:stock_reserve_sale.model_sale_stock_reserve
+msgid "Sale Stock Reserve"
+msgstr "Reservas de existencias de ventas"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:246
+#, python-format
+msgid "Sale order line \"[%s] %s\" has a related reservation.\n"
+"Please unreserve this line before delete the line"
+msgstr "La linea de venta \"[%s] %s\" tiene una reserva relacionada.\n"
+"Libere la reserva antes de elminar la linea."
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_stock_reservation_form
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: stock_reserve_sale
+#: model:ir.model,name:stock_reserve_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de orden de ventas"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:226
+#, python-format
+msgid "Several stock reservations are linked with the line. Impossible to adjust their quantity. Please release the reservation before changing the quantity."
+msgstr "Algunas reservas de stock están asociadas a la linea. Imposible ajustar la cantidad. Por favor, libera la reserva antes de cambiar la cantidad."
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_location_id
+msgid "Source Location"
+msgstr "Ubicación origen"
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_owner_id
+msgid "Stock Owner"
+msgstr "Propietario de existencias"
+
+#. module: stock_reserve_sale
+#: model:ir.model,name:stock_reserve_sale.model_stock_reservation
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_order_line_reservation_ids
+msgid "Stock Reservation"
+msgstr "Reserva de existencias"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/wizard/sale_stock_reserve.py:44
+#, python-format
+msgid "The lines have different locations. Please reserve them\n"
+"                    individually with the reserve button on each one."
+msgstr "Las lineas tienen diferentes ubicaciones.\n"
+"                    Reservelas individualmente con el boton de reserva en la linea del pedido."
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/wizard/sale_stock_reserve.py:161
+#, python-format
+msgid "The lines have different owners. Please reserve them\n"
+"                    individually with the reserve button on each one."
+msgstr "Las lineas tienen diferentes propietarios.\n"
+"                    Reservelas individualmente con el boton de reserva en la linea del pedido."
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/wizard/sale_stock_reserve.py:132
+#, python-format
+msgid "The lines have different picking types. Please reserve them\n"
+"                    individually with the reserve button on each one."
+msgstr "Las lineas tienen diferentes tipos de operacion.\n"
+"                    Reservelas individualmente con el boton de reserva en la linea del pedido."
+
+#. module: stock_reserve_sale
+#: model:ir.model.fields,field_description:stock_reserve_sale.field_sale_stock_reserve_date_validity
+msgid "Validity Date"
+msgstr "Fecha validez"
+
+#. module: stock_reserve_sale
+#: code:addons/stock_reserve_sale/model/sale.py:211
+#, python-format
+msgid "You cannot change the product or unit of measure of lines with a stock reservation. Release the reservation before changing the product."
+msgstr "No puedes cambiar el producto o la unidad de medida de las lineas con una reserva de stock. Libera la reserva antes de cambiar el producto."
+
+#. module: stock_reserve_sale
+#: model:ir.ui.view,arch_db:stock_reserve_sale.view_sale_stock_reserve_form
+msgid "or"
+msgstr "o"
